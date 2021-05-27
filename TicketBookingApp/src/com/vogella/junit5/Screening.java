@@ -1,6 +1,7 @@
 package com.vogella.junit5;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Screening {
 
@@ -8,8 +9,11 @@ public class Screening {
 	
 	private Film film;
 	
-	public Screening(Film film, ArrayList<Row> rows) {
+	private Date date;
+	
+	public Screening(Film film, Date date, ArrayList<Row> rows) {
 		this.film = film;
+		this.date = date;
 		this.rows = rows;
 	}
 	
@@ -19,6 +23,14 @@ public class Screening {
 	
 	public Film getFilm() {
 		return film;
+	}
+	
+	public Date getDate() {
+		return date;
+	}
+	
+	public String toString() {
+		return film.getName() + " " + date;
 	}
 	
 }
