@@ -1,6 +1,7 @@
 package com.vogella.junit5;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Room {
 	
@@ -21,8 +22,8 @@ public class Room {
 		screenings = new ArrayList<Screening>();
 	}
 	
-	public void addScreening(Film film) {
-		screenings.add(new Screening(film, getRows()));
+	public void addScreening(Film film, Date date) {
+		screenings.add(new Screening(film, date, getRows()));
 	}
 	
 	public int getNumberOfRoom() {
